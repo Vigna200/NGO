@@ -1,0 +1,194 @@
+{
+  "volunteers": [
+    {
+      "id": "vol-1",
+      "name": "Anita",
+      "skills": [
+        "medical",
+        "food distribution",
+        "logistics"
+      ],
+      "location": "Village A",
+      "availability": true
+    },
+    {
+      "id": "vol-2",
+      "name": "Rahul",
+      "skills": [
+        "water",
+        "logistics",
+        "shelter"
+      ],
+      "location": "Village B",
+      "availability": true
+    },
+    {
+      "id": "vol-3",
+      "name": "Farah",
+      "skills": [
+        "education",
+        "child support",
+        "medical"
+      ],
+      "location": "Town Center",
+      "availability": false
+    },
+    {
+      "id": "vol-4",
+      "name": "Joseph",
+      "skills": [
+        "shelter",
+        "food distribution",
+        "transport"
+      ],
+      "location": "City Relief Hub",
+      "availability": true
+    }
+  ],
+  "tasks": [
+    {
+      "id": "795c898c-b908-4599-b518-9d3d9b406cf4",
+      "task": "Deploy medical assistance to Village B",
+      "category": "medical",
+      "location": "Village B",
+      "people_affected": 80,
+      "priority": "High",
+      "priority_score": 94.0,
+      "assigned_to": "Rahul",
+      "assigned_volunteer_id": "vol-2",
+      "assignment_confidence": 0.95,
+      "status": "In Progress"
+    },
+    {
+      "id": "47ddf16b-3264-4084-938b-4d85cce349d6",
+      "task": "Provide clean water support to Area Sunrise",
+      "category": "water",
+      "location": "Area Sunrise",
+      "people_affected": 220,
+      "priority": "High",
+      "priority_score": 133.0,
+      "assigned_to": "Anita",
+      "assigned_volunteer_id": "vol-1",
+      "assignment_confidence": 0.85,
+      "status": "Completed"
+    },
+    {
+      "id": "251028d3-e154-4b40-bd63-2b89d7f58b80",
+      "task": "Deliver education kits to Location pending verification",
+      "category": "education",
+      "location": "Location pending verification",
+      "people_affected": 0,
+      "priority": "Low",
+      "priority_score": 36.0,
+      "assigned_to": "Anita",
+      "assigned_volunteer_id": "vol-1",
+      "assignment_confidence": 0.95,
+      "status": "Assigned"
+    }
+  ],
+  "processed_cases": [
+    {
+      "clean_extracted_text": "Urgent medical shortage in Village B affecting 80 patients and requiring immediate support.",
+      "file_name": null,
+      "category": "medical",
+      "location": "Village B",
+      "people_affected": 80,
+      "urgency": "critical",
+      "priority_score": 94.0,
+      "priority": "High",
+      "assigned_volunteer": "Anita",
+      "volunteer_confidence": 0.85,
+      "task": "Deploy medical assistance to Village B",
+      "status": "Action Required",
+      "task_record": {
+        "id": "795c898c-b908-4599-b518-9d3d9b406cf4",
+        "task": "Deploy medical assistance to Village B",
+        "category": "medical",
+        "location": "Village B",
+        "people_affected": 80,
+        "priority": "High",
+        "priority_score": 94.0,
+        "assigned_to": "Anita",
+        "assigned_volunteer_id": "vol-1",
+        "assignment_confidence": 0.85,
+        "status": "Action Required"
+      },
+      "score_breakdown": {
+        "urgency_weight": 100,
+        "people_weight": 80,
+        "category_weight": 100
+      },
+      "case_id": "41aaffd5-c419-4eef-bed2-d766bc3450b3",
+      "created_at": "2026-04-16T12:00:59.334638Z"
+    },
+    {
+      "clean_extracted_text": "Immediate water shortage in Area Sunrise affecting 220 people.",
+      "file_name": null,
+      "category": "water",
+      "location": "Area Sunrise",
+      "people_affected": 220,
+      "urgency": "critical",
+      "priority_score": 133.0,
+      "priority": "High",
+      "assigned_volunteer": "Anita",
+      "volunteer_confidence": 0.85,
+      "task": "Provide clean water support to Area Sunrise",
+      "status": "Action Required",
+      "task_record": {
+        "id": "47ddf16b-3264-4084-938b-4d85cce349d6",
+        "task": "Provide clean water support to Area Sunrise",
+        "category": "water",
+        "location": "Area Sunrise",
+        "people_affected": 220,
+        "priority": "High",
+        "priority_score": 133.0,
+        "assigned_to": "Anita",
+        "assigned_volunteer_id": "vol-1",
+        "assignment_confidence": 0.85,
+        "status": "Action Required"
+      },
+      "score_breakdown": {
+        "urgency_weight": 100,
+        "people_weight": 220,
+        "category_weight": 85
+      },
+      "case_id": "dff0afed-217a-4b7d-8492-7ec03b61a8d1",
+      "created_at": "2026-04-16T12:42:33.744205Z"
+    },
+    {
+      "clean_extracted_text": "need education awarness guiders for kids",
+      "file_name": null,
+      "category": "education",
+      "location": "Location pending verification",
+      "people_affected": 0,
+      "urgency": "moderate",
+      "priority_score": 36.0,
+      "priority": "Low",
+      "assigned_volunteer": "Anita",
+      "volunteer_confidence": 0.6,
+      "task": "Deliver education kits to Location pending verification",
+      "status": "Action Required",
+      "task_record": {
+        "id": "251028d3-e154-4b40-bd63-2b89d7f58b80",
+        "task": "Deliver education kits to Location pending verification",
+        "category": "education",
+        "location": "Location pending verification",
+        "people_affected": 0,
+        "priority": "Low",
+        "priority_score": 36.0,
+        "assigned_to": "Anita",
+        "assigned_volunteer_id": "vol-1",
+        "assignment_confidence": 0.6,
+        "status": "Action Required"
+      },
+      "score_breakdown": {
+        "urgency_weight": 50,
+        "people_weight": 0,
+        "category_weight": 55
+      },
+      "case_id": "61f6050c-0cd5-4f44-b020-0fafa0cbf098",
+      "created_at": "2026-04-16T12:49:09.063025Z"
+    }
+  ],
+  "last_updated": "2026-04-16T14:34:19.820319Z"
+}

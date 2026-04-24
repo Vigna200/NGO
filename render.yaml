@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: ngo-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    autoDeployTrigger: commit
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DB_NAME
+        value: ngo_response_platform
+
+  - type: static
+    name: ngo-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: VITE_API_BASE
+        sync: false
