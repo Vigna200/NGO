@@ -12,7 +12,7 @@ services:
       - key: MONGO_DB_NAME
         value: ngo_response_platform
 
-  - type: static
+  - type: web
     name: ngo-frontend
     runtime: static
     rootDir: frontend
