@@ -22,6 +22,22 @@ def create_app():
     app.register_blueprint(task_bp)
     app.register_blueprint(volunteer_bp)
 
+    @app.get("/")
+    def home():
+        return jsonify(
+            {
+                "message": "NGO Response Platform backend is running.",
+                "health": "/api/health",
+                "endpoints": [
+                    "/api/health",
+                    "/api/upload",
+                    "/api/tasks",
+                    "/api/volunteers",
+                    "/api/dashboard",
+                ],
+            }
+        )
+
     @app.get("/api/health")
     def health():
         return jsonify({"status": "ok"})
