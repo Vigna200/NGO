@@ -29,6 +29,9 @@ function ResultCard({ result }) {
             <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
               Source: {(result.source_labels || []).join(", ") || "Direct report"} | Score: {result.priority_score}
             </p>
+            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
+              AI service: {result.ai_service_used || "Rule-based NLP fallback"}
+            </p>
           </div>
         </div>
       ) : (

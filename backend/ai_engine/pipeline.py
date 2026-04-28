@@ -54,6 +54,8 @@ class AIPipeline:
             "people_affected": need["people_affected"],
             "affected_summary": people_label,
             "urgency": need["urgency"],
+            "ai_service_used": need.get("ai_service", "Rule-based NLP fallback"),
+            "extraction_method": need.get("extraction_method", "rule_based"),
             "confidence": need["confidence"],
             "source_count": need["source_count"],
             "source_labels": source_labels,
